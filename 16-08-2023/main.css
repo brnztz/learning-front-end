@@ -3,17 +3,15 @@
     padding: 0;
     border:0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
 body{
-    font-family: Arial, Helvetica, sans-serif;
     background-color: black;
     display: grid;
     grid-template-areas: "aside header"
                          "aside main"
-                         "footer footer";
+                         "aside footer";
     grid-template-columns: 15vw auto;
     grid-template-rows: 10vh 80vh 10vh;
     overflow: hidden;    
@@ -33,7 +31,7 @@ body{
 }
 header{
     grid-area: header;
-    background-color: gray;
+    background-color: rgb(230, 230, 230);
 }
 header{
     display: flex;
@@ -42,18 +40,29 @@ header{
     padding-right: 2vw;
     padding-left: 2vw;
 }
+div#BuscaRapida form button{
+
+    border-radius: 1vh;
+    padding: 1vw;
+    font-size: 1.3rem;
+    border-radius: 1vh;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    align-items: center;
+}
+
 div#BuscaRapida{
-    font-size: 1.2rem;
-    color: white;
+    font-size: 1.1rem;
+    color: black
 }
 div#BuscaRapida input{
     width: 20vw;
     height: 3vh;
     border-radius: 1vh;
     padding: 1vw;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     border-radius: 0.5vh;
-    border: 0;
+    border: 0.1vh solid black;
     background-color: rgba(255,255,255,0.5);   
 }
 div#BuscaRapida input:focus{
@@ -61,16 +70,15 @@ div#BuscaRapida input:focus{
 }
 aside{
     grid-area: aside;
-    background-color: gray;
+    background-color: red;
 }
 div#logo img{
     max-width: 14vw;
-    margin-bottom: 1vh;
-    margin-top: 1vw;
+    margin-top: 1.12vw;
 }
 main{
     grid-area: main;
-    background-color: gray;
+    background-color: rgb(255, 255, 255);
 }
 nav ul{
     display: flex;
@@ -78,18 +86,32 @@ nav ul{
 }
 nav ul li{
     list-style: none;
-    padding: 1.5vh;
-    background-color: darkred;
+    padding: 2vh;
+    background-color:   red;
     color: white;
     font-size: 1em;
-    margin-bottom: 0.2vh;
+
+    align-items: space-evenly;
 }
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
 nav ul li:hover{
-    background-color: yellow;
+    background-color: rgb(255, 136, 0);
     color: black;
     cursor: pointer;
 }
 footer{
     grid-area: footer;
-    background-color: gray;
+    background-color: white;
+}
+
+footer p{
+    color: black;
+    font-size: 1.1rem;
+    text-align: center;
+
 }

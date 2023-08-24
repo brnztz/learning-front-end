@@ -78,8 +78,51 @@ div#logo img{
 }
 main{
     grid-area: main;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);   
+    padding-top: 2vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 2vh;
+    overflow: auto;
 }
+
+#formulariof input[type=text],
+[type=date],
+[type=file],
+[type=number],
+[type=email],
+[type=tel],
+select,
+textarea {
+    width: 95%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: 'Roboto', sans-serif;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+input[type=submit] {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: inline-end;
+}
+
+input[type=submit]:hover {
+    background-color: #c91212;
+}
+
 nav ul{
     display: flex;
     flex-direction: column;
@@ -123,12 +166,13 @@ th {
 }
 footer{
     grid-area: footer;
-    background-color: white;
+    background-color: rgb(230, 230, 230);
 }
 
 footer p{
     color: black;
     font-size: 1.1rem;
     text-align: center;
+    padding-top: 1vh;
 
 }

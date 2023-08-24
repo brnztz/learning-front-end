@@ -12,7 +12,10 @@
 <body>
     <header>
         <div id="BuscaRapida">
-            Busca Rápida: <input type="text">
+            <form>
+                <input type="text" placeholder="O que está procurando?">
+                <button class="mdi mdi-magnify"></button>
+            </form>
         </div>
         <div id="login">
             <span class="mdi mdi-account"></span>
@@ -30,12 +33,67 @@
                 <li><a href="professores.html" class="mdi mdi-human-male-board"> Professores</a></li>
                 <li><a href="aniversariantes.html" class="mdi mdi-account-group"> Aniversariantes</a></li>
                 <li><a href="chamado.html" class="mdi mdi-phone"> Chamado</a></li>
-                <li><a href="faq.html" class="mdi mdi-help"> FAQ</a></li>
             </ul>
         </nav>
     </aside>
     <main>
-        
+        <section id="conteudo">
+            <div id="formulariof">
+                <form method="post" action="https://confirmar.animavite.com/processa.php">
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="fname">Primeiro Nome</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="fname" name="firstname" placeholder="Informe seu nome">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="lname">Sobrenome</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="lname" name="lastname" placeholder="Informe seu sobrenome">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="email" id="email" name="email" placeholder="Informe seu E-mail">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="options">Motivo para o Contato</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="options" name="options">
+                                    <option value="brasil">Insatisfação</option>
+                                    <option value="canada">Problemas Escolares</option>
+                                    <option value="usa">Nota do Aluno</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="subject">Assunto</label>
+                            </div>
+                            <div class="col-75">
+                                <textarea id="subject" name="subject"
+                                    placeholder="Digite de maneira clara o ocorrido"
+                                    style="height:200px"></textarea>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <input type="submit" value="Enviar">
+                        </div>
+                </form>
+            </div>
+        </section>
     </main>
     <footer>
         <p>Sistema de Aniversariantes - Escola do Breca</p>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Framework Materialize</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/materialize.css" />
+    <script src="js/materialize.js"></script>
+    <style></style>
+</head>
+
+<body class="brown lighten-4">
+    <div class="row base">
+        <nav class="col l12 m12 s12 pink darken-3">
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">
+                    <img class="responsive-img" src="images/logo.png">
+                </a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="profissionais.html">Profissionais</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a class="waves-effect waves-light btn pink lighten-2"><i
+                                class="material-icons right">account_circle</i>Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <li><a class="op" href="home.html"><i class="material-icons right">home</i>Home</a></li>
+            <li><a class="op" href="profissionais.html"><i class="material-icons right">group</i>Profissionais</a></li>
+            <li><a class="op" href="portfolio.html"><i class="material-icons right">library_books</i>Portfolio</a></li>
+            <li><a class="op" href="contato.html"><i class="material-icons right">email</i>Contato</a></li>
+            <li><a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>Login</a>
+            </li>
+        </ul>
+
+        <div class="col l3 m3 s12 blue-grey">DIV 2</div>
+        <div class="col l9 m9 s12 brown lighten-3">DIV 3</div>
+        <div class="col l12 m12 s12 brown darken-3">DIV 4</div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var elems = document.querySelectorAll(".sidenav");
+            var options = document.querySelectorAll(".op");
+            var instances = M.Sidenav.init(elems, options);
+        });
+    </script>
+</body>
+
+</html>

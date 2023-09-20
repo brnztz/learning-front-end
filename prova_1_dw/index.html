@@ -26,16 +26,12 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="midia.html"><i data-feather="youtube"></i>
-                            Midia</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="info.html"><i data-feather="info"></i>
                             Informações</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="table.html"><i
-                                data-feather="bar-chart"></i> Tabela</a>
+                        <a class="nav-link active" aria-current="page" href="table.html"><i data-feather="user"></i>
+                            Clientes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="form.html"><i data-feather="mail"></i>
@@ -44,41 +40,66 @@
                 </ul>
                 <form class="text-end">
                     <a href="index.html"><button type="button" class="btn btn-outline-light me-2"><i
-                                data-feather="user"></i> Login</button></a>
+                                data-feather="log-in"></i> Login</button></a>
                 </form>
             </div>
         </div>
     </nav>
 
 
-    <main class="container-fluid row">
-        <div class="row align-items-center" style="height: 70vh;">
-            <div class="mx-auto col-10 col-md-8 col-lg-6">
-                <form class="w-50 m-auto mt-5">
-                    <h1 class="h3 mb-3">Autenticar</h1>
-
-                    <div class="form-floating">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Email address</label>
-                    </div>
-                    <div class="form-floating">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                        <label for="floatingPassword">Password</label>
+    <main>
+        <div class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1" role="dialog"
+            id="modalSignin">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content rounded-4 shadow">
+                    <div class="modal-header p-5 pb-4 border-bottom-0">
+                        <h1 class="fw-bold mb-0 fs-2">Login</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
 
-                    <div class="form-check text-start my-3">
-                        <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                            Remember me
-                        </label>
+                    <div class="modal-body p-5 pt-0">
+                        <form class="">
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control rounded-3" id="floatingInput"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">Email</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control rounded-3" id="floatingPassword"
+                                    placeholder="Password">
+                                <label for="floatingPassword">Senha</label>
+                            </div>
+                            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Log in</button>
+                            <hr class="my-4">
+                            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                                <a><i data-feather="twitter"></i>
+                                    Continue com Twitter</a>
+                            </button>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+                                <a><i data-feather="facebook"></i>
+                                    Continue com Facebook</a>
+                            </button>
+                            <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+                                <a><i data-feather="github"></i>
+                                    Continue com GitHub</a>
+                            </button>
+                        </form>
                     </div>
-                    <button class="btn btn-primary py-2" type="submit">Sign in</button>
-                    <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
-                </form>
+                </div>
             </div>
         </div>
     </main>
-
+    <div class="container">
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="info.html" class="nav-link px-2 text-body-secondary">Sobre</a></li>
+                <li class="nav-item"><a href="table.html" class="nav-link px-2 text-body-secondary">Clientes</a></li>
+                <li class="nav-item"><a href="form.html" class="nav-link px-2 text-body-secondary">Contato</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">&copy; 2023 Jaiminho, LTDA</p>
+        </footer>
+    </div>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>

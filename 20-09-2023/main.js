@@ -10,9 +10,9 @@ c.addEventListener('click', () => {
             method: 'POST',
             body: JSON.stringify(
                 {
-                    nome: 'Bruno',
-                    email: 'brunozaiatz@unemat.br',
-                    idade: 21
+                    nome: 'Juju',
+                    email: 'juju@unemat.br',
+                    idade: 22
                 }
             )
         }
@@ -23,13 +23,36 @@ c.addEventListener('click', () => {
 });
 
 r.addEventListener('click', () => {
-    fetch().then().then().catch();
+    fetch('https://crud-d9af6-default-rtdb.firebaseio.com/clientes.json')
+    .then(response => response.json())
+    .then(data => {
+        for (const key in data) {
+            console.log(data[key]);
+        }
+    })
+    .catch(error => console.log(error));
 });
 
 u.addEventListener('click', () => {
-    console.log('Update');
+    fetch('https://crud-d9af6-default-rtdb.firebaseio.com/clientes/-Neozi90V1p65qlqYa70.json',{
+        method: 'PUT',
+        body: JSON.stringify(
+            {
+                nome: 'Juju',
+                email: 'juju@gmail.com',
+                idade: 24
+            })
+})
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error));
 });
 
 d.addEventListener('click', () => {
-    console.log('Delete');
-    });
+    fetch('https://crud-d9af6-default-rtdb.firebaseio.com/clientes/-Neozi90V1p65qlqYa70.json',{
+        method: 'DELETE'
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error));
+});

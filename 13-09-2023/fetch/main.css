@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    padding:10vw;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #151515;
+    color:white;
+    background-size: cover;
+}
+input{
+    margin:5vh;
+    padding:2vw;
+    width: 500px;
+    border:1px solid white;
+    background-color: #252525;
+    font-size:2rem;
+    color:white;
+    text-align: center;
+}
+#resposta{
+    margin:5vh;
+    padding:10vw;
+    width: 500px;
+    border:1px solid white;
+    background-color: #222;
+    font-size:4rem;
+    color:yellow;
+    text-align: center;
+    display: none;
+}

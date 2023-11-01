@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+
+<body>
+    <h1>CRUD COM FETCH E FIREBASE</h1>
+    <form onsubmit="return false">
+        <input type="hidden" name="id" id="id">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+        <label for="mensagem">Mensagem</label>
+        <input type="text" name="mensagem" id="mensagem">
+        <button onclick="salvar()">Salvar</button>
+    </form>
+    <h3>Lista de Clientes</h3>
+    <ul id="lista">
+    </ul>
+    <script src='main.js'></script>
+</body>
+
+</html>

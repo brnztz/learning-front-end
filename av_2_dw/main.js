@@ -1,5 +1,4 @@
 function salvar() {
-    // promise: api fetch();
     console.log('vou salvar...');
     const cliente = {};
     const campoNome = document.querySelector('#nome');
@@ -24,13 +23,13 @@ function salvar() {
                 email: cliente.email,
                 mensagem: cliente.mensagem,
             })
-        }) // busca
-            .then(response => response.json()) // converter para json
+        })
+            .then(response => response.json())
             .then(data => {
                 console.log(data)
                 carregar();
-            }) // acessa os dados
-            .catch(error => console.log(error)); // trata os erros
+            })
+            .catch(error => console.log(error));
     }
 }
 
@@ -40,7 +39,7 @@ function carregar() {
         .then(response => response.json())
         .then(data => {
             const lista = document.querySelector('#lista');
-            lista.innerHTML = ''; // limpa a lista
+            lista.innerHTML = '';
             for (const key in data) {
                 const cliente = data[key];
                 cliente.id = key;

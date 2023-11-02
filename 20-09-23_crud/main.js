@@ -76,7 +76,6 @@ function atualizar(cliente) {
         .then(response => response.json())
         .then(() => carregar())
         .catch(error => console.log(error))
-
 }
 
 function remover(key) {

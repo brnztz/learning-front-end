@@ -39,17 +39,16 @@
                     </li>
                 </ul>
                 <form class="text-end">
-                    <a href=""><button type="button" class="btn btn-outline-light me-2"><i
-                                data-feather="log-in"></i> Login</button></a>
+                    <a href=""><button type="button" class="btn btn-outline-light me-2"><i data-feather="log-in"></i>
+                            Login</button></a>
                 </form>
             </div>
         </div>
     </nav>
     <main class="container-fluid row">
         <div class="row align-items-center" style="padding-top: 2vh;padding-left: 7vh;">
-            <form>
+            <form onsubmit="return false">
                 <h4>Fale conosco</h4>
-                <br>
                 <div class="row" style="padding-bottom: 1.5vh;">
                     <input type="hidden" name="id" id="id">
                     <div class="mb-3">
@@ -63,22 +62,23 @@
                 </div>
                 <div class="mb-3">
                     <label for="mensagem" class="form-label">Mensagem</label>
-                    <textarea class="form-control" id="mensagem" name="mensagem" placeholder="Digite aqui" rows="5"></textarea>
+                    <textarea class="form-control break-word" id="mensagem" name="mensagem" placeholder="Digite aqui"
+                        rows="5"></textarea>
                 </div>
-                <button onclick="salvar()" class="btn btn-primary">Salvar</button>
+                <button onclick="salvar()" class="btn btn-success">Enviar</button>
+                <button id="cancelar" class="btn btn-danger" style="display: none;" onclick="cancel()">Cancelar</button>
             </form>
         </div>
         <div style="padding-top: 2vh;padding-left: 7vh;">
             <br>
             <h4>Chamados</h4>
-            <ol class="list-group" id="lista" >
-            </ol>
+            <ul class="list-group list-unstyled" id="lista">
+            </ul>
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous">
-    </script>
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+        </script>
     <script>
         feather.replace();
     </script>
